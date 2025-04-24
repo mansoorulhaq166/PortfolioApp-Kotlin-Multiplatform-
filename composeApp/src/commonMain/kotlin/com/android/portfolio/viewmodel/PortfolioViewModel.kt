@@ -37,14 +37,14 @@ class PortfolioViewModel {
                 Project(
                     name = "Guess Master",
                     link = "https://github.com/mansoorulhaq166/Guess-The-Number",
-                    description = "A number guessing game with hints and difficulty levels.",
-                    techStack = listOf("Kotlin", "Jetpack Compose", "MVVM", "Android")
+                    description = "A Jetpack Compose-powered Android game where players guess a hidden number based on hints.",
+                    techStack = listOf("Kotlin", "Jetpack Compose", "MVVM", "Hilt", "Material 3", "StateFlow")
                 ),
                 Project(
                     name = "Word Connect Puzzle",
                     link = "https://github.com/mansoorulhaq166/Word-Connect-Puzzle",
                     description = "A word formation puzzle game with hundreds of levels.",
-                    techStack = listOf("Kotlin", "Jetpack Compose", "Game Dev", "Custom View")
+                    techStack = listOf("Kotlin", "Jetpack Compose", "Game Development", "In-App Purchases", "Firebase Analytics")
                 ),
                 Project(
                     name = "Islamic Utility App",
@@ -57,6 +57,24 @@ class PortfolioViewModel {
                     link = "No Link",
                     description = "A Compose Multiplatform based portfolio app.",
                     techStack = listOf("KMP", "Jetpack Compose", "Android", "Desktop", "Web")
+                ),
+                Project(
+                    name = "Simple BMI Calculator",
+                    link = "https://github.com/mansoorulhaq166/bmi-calculaor",
+                    description = "A straightforward Android app to calculate Body Mass Index (BMI) based on user input.",
+                    techStack = listOf("Kotlin", "XML", "MVVM", "Android")
+                ),
+                Project(
+                    name = "Campus Recruitment System",
+                    link = "https://github.com/mansoorulhaq166/CamousRecruitmentSystem",
+                    description = "A feature-rich Android app developed with Kotlin & XML to streamline campus recruitment processes.",
+                    techStack = listOf("Kotlin", "XML", "MVVM", "Firebase", "AdMob")
+                ),
+                Project(
+                    name = "QuickSnap",
+                    link = "https://github.com/mansoorulhaq166/QuickSnap",
+                    description = "A clean and minimal Android camera app built with Kotlin, featuring photo capture and basic editing options.",
+                    techStack = listOf("Kotlin", "CameraX", "Jetpack Compose", "Android")
                 )
             ),
             email = "mansoorulhaq166@gmail.com",
