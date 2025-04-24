@@ -7,8 +7,9 @@ import com.android.portfolio.ui.App
 fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
-        title = "AndroidDevPortfolio",
+        title = "Mansoor Android Portfolio",
     ) {
-        App()
+        val context = "Context"
+        App(context)
     }
 }

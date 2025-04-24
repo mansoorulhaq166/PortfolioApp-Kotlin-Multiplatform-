@@ -30,7 +30,6 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.rounded.LocationOn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -50,7 +49,7 @@ import com.android.portfolio.util.openUrl
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
-fun HeaderSection(portfolio: Portfolio) {
+fun HeaderSection(context: Any, portfolio: Portfolio) {
     val infiniteTransition = rememberInfiniteTransition()
     val glow = infiniteTransition.animateFloat(0.9f, 1.1f, infiniteRepeatable(tween(2000, easing = FastOutSlowInEasing), RepeatMode.Reverse))
     val rotate = infiniteTransition.animateFloat(-2f, 2f, infiniteRepeatable(tween(3000, easing = FastOutSlowInEasing), RepeatMode.Reverse))
@@ -132,7 +131,7 @@ fun HeaderSection(portfolio: Portfolio) {
                 backgroundColor = MaterialTheme.colors.primary,
                 tint = MaterialTheme.colors.onPrimary,
                 rotationValue = rotate.value,
-                onClick = { openUrl("https://github.com/mansoorulhaq166") }
+                onClick = { openUrl(context, "https://github.com/mansoorulhaq166") }
             )
 
             Spacer(modifier = Modifier.width(16.dp))
@@ -142,20 +141,8 @@ fun HeaderSection(portfolio: Portfolio) {
                 backgroundColor = MaterialTheme.colors.primary,
                 tint = MaterialTheme.colors.onPrimary,
                 rotationValue = rotate.value,
-                onClick = { openUrl("https://www.linkedin.com/in/mansoor-ul-haq13") }
+                onClick = { openUrl(context, "https://www.linkedin.com/in/mansoor-ul-haq13") }
             )
-
-//            Spacer(modifier = Modifier.width(16.dp))
-//
-//            // Email button
-//            SocialButton(
-//                icon = Icons.Default.Email,
-//                contentDescription = "Email",
-//                backgroundColor = MaterialTheme.colors.secondary,
-//                tint = MaterialTheme.colors.onSecondary,
-//                rotationValue = rotationAnimation.value,
-//                onClick = { /* Add email action */ }
-//            )
         }
     }
 }
@@ -176,16 +163,6 @@ fun SocialButton(
             .graphicsLayer { rotationZ = rotationValue }
             .clip(CircleShape)
             .background(backgroundColor)
-//            .border(
-//                width = 2.dp,
-//                brush = Brush.linearGradient(
-//                    colors = listOf(
-//                        backgroundColor,
-//                        backgroundColor.copy(alpha = 0.7f)
-//                    )
-//                ),
-//                shape = CircleShape
-//            )
     ) {
         when (icon) {
             is ImageVector -> Icon(

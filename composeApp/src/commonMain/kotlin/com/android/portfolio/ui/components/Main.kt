@@ -34,6 +34,7 @@ import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -120,6 +121,7 @@ fun SectionCard(
     content: @Composable () -> Unit
 ) {
     Card(
+        backgroundColor = Color(0xFF1F1F1F),
         shape = RoundedCornerShape(16.dp),
         elevation = 8.dp,
         modifier = Modifier

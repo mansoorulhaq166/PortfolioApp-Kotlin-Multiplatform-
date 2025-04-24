@@ -47,22 +47,10 @@ class PortfolioViewModel {
                     techStack = listOf("Kotlin", "Jetpack Compose", "Game Development", "In-App Purchases", "Firebase Analytics")
                 ),
                 Project(
-                    name = "Islamic Utility App",
-                    link = "No Link",
-                    description = "Prayer times, Qibla, Tasbeeh, and Quran features.",
-                    techStack = listOf("Kotlin", "Location", "Permissions", "Sensor API", "UI Design")
-                ),
-                Project(
-                    name = "AndroidDevPortfolio",
-                    link = "No Link",
+                    name = "PortfolioApp(Kotlin Multiplatform)",
+                    link = "https://github.com/mansoorulhaq166/PortfolioApp-Kotlin-Multiplatform-",
                     description = "A Compose Multiplatform based portfolio app.",
                     techStack = listOf("KMP", "Jetpack Compose", "Android", "Desktop", "Web")
-                ),
-                Project(
-                    name = "Simple BMI Calculator",
-                    link = "https://github.com/mansoorulhaq166/bmi-calculaor",
-                    description = "A straightforward Android app to calculate Body Mass Index (BMI) based on user input.",
-                    techStack = listOf("Kotlin", "XML", "MVVM", "Android")
                 ),
                 Project(
                     name = "Campus Recruitment System",
@@ -75,12 +63,18 @@ class PortfolioViewModel {
                     link = "https://github.com/mansoorulhaq166/QuickSnap",
                     description = "A clean and minimal Android camera app built with Kotlin, featuring photo capture and basic editing options.",
                     techStack = listOf("Kotlin", "CameraX", "Jetpack Compose", "Android")
+                ),
+                Project(
+                    name = "Simple BMI Calculator",
+                    link = "https://github.com/mansoorulhaq166/bmi-calculaor",
+                    description = "A straightforward Android app to calculate Body Mass Index (BMI) based on user input.",
+                    techStack = listOf("Kotlin", "XML", "MVVM", "Android")
                 )
             ),
             email = "mansoorulhaq166@gmail.com",
             profileImage = Res.drawable.profile,
-            github = "https://github.com/mansoorulhaq",
-            linkedin = "https://linkedin.com/in/mansoorulhaq"
+            github = "https://github.com/mansoorulhaq166",
+            linkedin = "https://linkedin.com/in/mansoor-ul-haq13"
         )
     }
 }

@@ -1,6 +1,18 @@
 package com.android.portfolio.util
 
-actual fun openUrl(url: String) {
-    // Intentionally left empty, should not be called directly on Android non-Compose context
-    error("Call openUrlComposable() from a Composable context on Android")
+import android.content.Context
+import android.content.Intent
+import androidx.core.net.toUri
+
+actual fun openUrl(context: Any, url: String) {
+    val ctx = context as Context
+    val intent = if (url.startsWith("mailto:")) {
+        Intent(Intent.ACTION_SENDTO).apply {
+            data = url.toUri()
+        }
+    } else {
+        Intent(Intent.ACTION_VIEW, url.toUri())
+    }
+
+    ctx.startActivity(Intent.createChooser(intent, "Open with"))
 }

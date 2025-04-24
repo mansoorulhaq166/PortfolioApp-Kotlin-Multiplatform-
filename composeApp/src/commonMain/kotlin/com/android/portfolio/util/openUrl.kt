@@ -1,3 +1,3 @@
 package com.android.portfolio.util
 
-expect fun openUrl(url: String)
+expect fun openUrl(context: Any, url: String)

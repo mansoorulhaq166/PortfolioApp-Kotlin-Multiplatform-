@@ -42,7 +42,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
-fun App() {
+fun App(context: Any) {
     PortfolioTheme {
         val viewModel = remember { PortfolioViewModel() }
         val portfolio = viewModel.portfolio
@@ -114,7 +114,7 @@ fun App() {
                                     slideInVertically(),
                             exit = fadeOut()
                         ) {
-                            HeaderSection(portfolio)
+                            HeaderSection(context, portfolio)
                         }
                     }
 
@@ -137,7 +137,7 @@ fun App() {
                             exit = fadeOut()
                         ) {
                             ProjectsSection(portfolio) { project ->
-                                openUrl(project.link)
+                                openUrl(context, project.link)
                             }
                         }
                     }
@@ -149,7 +149,7 @@ fun App() {
                                     slideInVertically(),
                             exit = fadeOut()
                         ) {
-                            ContactSection(portfolio)
+                            ContactSection(context, portfolio)
                         }
                     }
                 }
